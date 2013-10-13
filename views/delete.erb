@@ -1,0 +1,5 @@
+<form action="/<%= @movie.id %>" method='post'>
+	<input type='hidden' name='_method' value='delete'>
+	Delete <%= @movie.title %>? <input type='submit' value='Delete'> <a href='/'>Cancel</a>
+
+</form>

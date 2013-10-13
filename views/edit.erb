@@ -1,0 +1,12 @@
+<% if @movie %>
+	<%= @movie.path %>
+	<form action='/<%= @movie.id %>' method='post' id='edit'>
+		<input type='hidden' name='_method' value='put'>
+		IMDB: <input type='text' name='imdbid' value='<%= @movie.imdb %>'>
+		<br/>
+		<input type='submit'>
+		<a href='/delete/<%= @movie.id %>'>Delete</a>
+	</form>
+<% else %>
+	<p>Movie not found</p>
+<% end %>

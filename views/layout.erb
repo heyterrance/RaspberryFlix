@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang='en'>
+	<head>
+		<meta charset='utf8'>
+		<title><%= @title + ' | RaspberryFlix' %></title>
+	</head>
+	<body>
+		<header>
+			<hgroup>
+				<center><a href='/'>RasberryFlix</a><hr/></center>
+			</hgroup>
+		</header>
+		
+		<div id='main'>
+			<%= yield %>
+		</div>
+		<hr/>
+		<footer>
+			<p align='right'><small>An app for Terrance, Jay, and John</small></p>
+		</footer>
+	</body>
+</html>

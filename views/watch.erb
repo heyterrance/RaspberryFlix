@@ -1,0 +1,20 @@
+<div id='vid-holder'>
+	<% if FileTest.exist?(File.join('public', @path)) %>
+		<video id='vid' width='720' controls>
+				<source src='<%= @path %>' type='video/mp4'>
+				<source src='<%= @path %>' type='video/ogg'>
+				<source src='<%= @path %>' type='video/x-matroska'>
+				Browser does not support video tag
+		</video>
+	<% else %>
+		<div id='vid'><br/>Could not find video file: <%= @path %><br/><br/></div>
+	<% end %>
+</div>
+
+<div id='title'>
+	<a href='http://imdb.com'>
+	<b><%= @title %></b>
+	<% if @movie.year %> (<%= @movie.year %>) <% end %>
+	</a>
+</div>
+<div id='plot'><%= @movie.plot %></div>

@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang='en'>
+	<head>
+		<meta charset='utf8'/>
+		<link href='/theater.css' rel='stylesheet'/>
+		<title><%= @title + ' | RaspberryFlix' %></title>
+	</head>
+
+	<body>
+		<div id='header'>
+			<a href='/'>RaspberryFlix</a>
+		</div>
+		<div id='main'>
+			<%= yield %>
+		</div>
+		<hr/>
+		<div id='footer'>An app for Terrance, Jay, and John</div>
+	</body>
+</html>

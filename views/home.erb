@@ -1,0 +1,16 @@
+<% if @movies.size > 0 %>
+	<% @movies.each do |movie| %>
+		<p>
+			<a href='watch/<%= movie.id %>'><%= movie.title %></a>
+			<% if movie.year %>
+				(<%= movie.year %>)
+			<% end %>
+			| <a href='edit/<%= movie.id %>'>Edit</a> <br/>
+			<p>
+				<%= movie.plot %>
+			</p>
+		</p>
+	<% end %>
+	<hr/>
+<% end %>
+<a href='/upload'>Upload</a>
